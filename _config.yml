@@ -1,8 +1,10 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Charles Jekel - jekel.me
+description: Mechanical Engineer. Modeling. Materials. Optimization. 
+meta_description: "Charles Jekel is a mechanical engineer who may sometimes blog usefull stuff about modeling, materials, or optimization"
+email: cjekel /at\ gmail /dot\ com
 
 aboutPage: true
+cvPage: true
 
 markdown: redcarpet
 highlighter: pygments
@@ -10,14 +12,14 @@ highlighter: pygments
 paginate: 20
 baseurl: /
 domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+google_analytics: 'UA-67542734-1'
+disqus: true
+disqus_shortname: 'cjekel'
 
 # Details for the RSS feed generator
 url:            'http://your-blog-url.example.com'
-author:         'Your Name'
-authorTwitter:  'YourTwitterUsername'
+author:         'Charles Jekel'
+# I don't Tweet authorTwitter:  'YourTwitterUsername'
 
 permalink:       /:year/:title/
 

@@ -13,17 +13,20 @@ archive: true
     </section>
 </article>
 <footer id="post-meta" class="clearfix">
-    <a href="http://twitter.com/{{ site.authorTwitter }}">
+    <a href="{{ site.baseurl }}about">
         <img class="avatar" src="{{ site.baseurl }}assets/images/avatar.png">
         <div>
             <span class="dark">{{ site.author }}</span>
             <span>{{ site.description }}</span>
+            <span>{{ site.email }}</span>
+
+            <span><a href="{{ site.baseurl }}">Home </a><a href="{{ site.baseurl }}cv"> CV </a></span>
         </div>
     </a>
 
-    <section id="sharing">
+    <!-- Remove Sharing links for now:<section id="sharing">
         {% include share.html %}
-    </section>
+    </section>-->
 </footer>
 
 <!-- Disqus comments -->
