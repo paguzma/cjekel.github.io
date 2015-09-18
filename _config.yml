@@ -11,13 +11,13 @@ highlighter: pygments
 
 paginate: 20
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
+domain_name: 'http://jekel.me'
 google_analytics: 'UA-67542734-1'
 disqus: true
 disqus_shortname: 'cjekel'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
+url:            'http://jekel.me'
 author:         'Charles Jekel'
 # I don't Tweet authorTwitter:  'YourTwitterUsername'
 
