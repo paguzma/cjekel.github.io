@@ -1,6 +1,6 @@
 ---
 title:  "Open and View IM7 Files with Python"
-date:   2015-09-18 22:00:00
+date:   2015-09-18 23:44:00
 description: How to open and view LaVision DaVis IM7 files using the wrapper ReadIM and Python
 ---
 This post will describe how to open and view LaVision DaVis IM7 in python. 
