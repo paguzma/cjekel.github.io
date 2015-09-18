@@ -3,7 +3,7 @@ title:  "Open and View IM7 Files with Python"
 date:   2015-09-18 23:44:00
 description: How to open and view LaVision DaVis IM7 files using the wrapper ReadIM and Python
 ---
-This post will describe how to open and view LaVision DaVis IM7 in python. 
+This post will describe how to open and view LaVision DaVis IM7 files in python. 
 
 Digital Image Correlation (DIC) is a non-intrusive optical tool for providing displacement values and strain fields. I use DIC to measure the full displacement field when I test my material samples. In my department, we use the hardware and software of [LaVision](http://www.lavision.de/en/index.php) GMBH for all of our DIC needs. The images captured by the LaVision hardware for my DIC projects are stored in IM7 files. Unfortunately IM7 files can only be opened in DaVis (Unless you are a MATLAB user and can take advantage of [ReadIMX](http://www.lavision.de/en/news/2014/2244/)). It would be nice to open IM7 files, to view the images stored inside, without opening the DaVis software.
 
