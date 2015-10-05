@@ -3,7 +3,7 @@ title:  "Least Squares Sphere Fit"
 date:   2015-09-13 22:00:00
 description: Fitting a sphere to data points using the least squares method
 ---
-It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A python function, which determines the sphere of best fit, is then presneted.
+It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A Python function, which determines the sphere of best fit, is then presneted.
 
 So let's say you have a three dimensional data set. The data points plotted in three dimensional space resemble a sphere, so you'd like to know the sphere that would fit your data set the best. Well I have a sample data set that is well suited for a spherical fit using the least squares method. A plot of data points in three dimensional space can be seen in the following image. Now let's go through the process fitting a sphere to this data set.
 
@@ -70,7 +70,7 @@ $$
 $$
 </div>
 
-We can use the above equation to define a simple python function that will fit a sphere to <span>\\( x \\)</span>, <span>\\( y \\)</span>, and <span>\\( z \\)</span> data points. The python numpy library includes a least squares function that is used to determine the best <span>\\( \vec{c} \\)</span>. The function then returns the radius and center coordinates of the sphere.
+We can use the above equation to define a simple Python function that will fit a sphere to <span>\\( x \\)</span>, <span>\\( y \\)</span>, and <span>\\( z \\)</span> data points. The Python NumPy library includes a least squares function that is used to determine the best <span>\\( \vec{c} \\)</span>. The function then returns the radius and center coordinates of the sphere.
 
 {% highlight python %}
 import numpy as np

@@ -3,11 +3,11 @@ title:  "Open and View IM7 Files with Python"
 date:   2015-09-18 23:44:00
 description: How to open and view LaVision DaVis IM7 files using the wrapper ReadIM and Python
 ---
-This post will describe how to open and view LaVision DaVis IM7 files in python. 
+This post will describe how to open and view LaVision DaVis IM7 files in Python. 
 
 Digital Image Correlation (DIC) is a non-intrusive optical tool for providing displacement values and strain fields. I use DIC to measure the full displacement field when I test my material samples. In my department, we use the hardware and software of [LaVision](http://www.lavision.de/en/index.php) GMBH for all of our DIC needs. The images captured by the LaVision hardware for my DIC projects are stored in IM7 files. Unfortunately IM7 files can only be opened in DaVis (Unless you are a MATLAB user and can take advantage of [ReadIMX](http://www.lavision.de/en/news/2014/2244/)). It would be nice to open IM7 files, to view the images stored inside, without opening the DaVis software.
 
-Well thanks to [Alan Fleming](https://bitbucket.org/fleming79/), there is now a tool to read IM7 files in python. [ReadIM](https://pypi.python.org/pypi/ReadIM/0.6.5) is a wrapper that works with the C++ libraries provided by LaVision GMBH. You should be able to install ReadIM with pip on python versions 2.7, 3.3 and 3.4. If pip fails, you'll have to follow the build instructions [here](https://bitbucket.org/fleming79/readim). 
+Well thanks to [Alan Fleming](https://bitbucket.org/fleming79/), there is now a tool to read IM7 files in Python. [ReadIM](https://pypi.python.org/pypi/ReadIM/0.6.5) is a wrapper that works with the C++ libraries provided by LaVision GMBH. You should be able to install ReadIM with pip on Python versions 2.7, 3.3 and 3.4. If pip fails, you'll have to follow the build instructions [here](https://bitbucket.org/fleming79/readim). 
 
 To install with pip simply run the following line in your terminal. 
 <div>
@@ -16,7 +16,7 @@ pip install ReadIM
 {% endhighlight %}
 </div>
 
-I'm using python 2.7, and the pip install was successful. We can open an IM7 file in python with the following commands, where myDavis.im7 is the IM7 file that I'd like to open. We won't be working with vbuff. Since Mr. Fleming informs us that memory cleanup is not automatic, we'll have to manually delete vbuff. 
+I'm using Python 2.7, and the pip install was successful. We can open an IM7 file in Python with the following commands, where myDavis.im7 is the IM7 file that I'd like to open. We won't be working with vbuff. Since Mr. Fleming informs us that memory cleanup is not automatic, we'll have to manually delete vbuff. 
  
 <div>
 {% highlight python %}
@@ -44,7 +44,7 @@ We see the shape of v\_array to be 2L, 2456L, 2058L. I use two 5-megapixel camer
 {% endhighlight %}
 </div>
 
-We can now create a plot of the first camera image stored in the IM7 file with matplotlib in python. Since DIC uses contrast values, it makes sense to plot the image as greyscale by setting the cmap parameter.  
+We can now create a plot of the first camera image stored in the IM7 file with matplotlib in Python. Since DIC uses contrast values, it makes sense to plot the image as greyscale by setting the cmap parameter.  
 <div>
 {% highlight python %}
 >>> import matplotlib.pyplot as plt
