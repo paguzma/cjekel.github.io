@@ -5,7 +5,7 @@ profile: true
 ---
 
 #About Me
-I'm a semi-pro traveler, burrito aficionado, python scripter, and problem solver. Currently I'm pursuing a Master's Degree in Mechanical Engineering at Stellenbosch University. Some of my interests include:<ul><li>numerical modeling</li>  
+I'm a semi-pro traveler, burrito aficionado, Python scripter, and problem solver. Currently I'm pursuing a Master's Degree in Mechanical Engineering at Stellenbosch University. Some of my interests include:<ul><li>numerical modeling</li>  
 
 <li>high performance computing</li>  
 
