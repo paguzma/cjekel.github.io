@@ -2,6 +2,7 @@
 title:  "Least Squares Sphere Fit"
 date:   2015-09-13 22:00:00
 description: Fitting a sphere to data points using the least squares method
+keywords: [Python, least squares fit, sphere fit, Python spere fit]
 ---
 It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A Python function, which determines the sphere of best fit, is then presneted.
 

@@ -2,6 +2,7 @@
 title:  "Python Twitter Bot Using Google Cloud Shell"
 date:   2015-10-05 23:25:00
 description: A twitter bot, written in Python, that tweets when the Eskom load shedding stage changes implemented in Google Cloud Shell
+keywords: [Python, twitter bot, google cloud shell, ESKOM load shedding]
 ---
 For this post, I discuss how to use a twitter bot with Google Cloud Shell to tweet the Eskom load shedding status. The source code for the Eskom Load Shedding Twitter bot is hosted here on [Github](https://github.com/cjekel/EskomLoadSheddingTwitterBot). 
 
