@@ -12,9 +12,9 @@ MEng Mechanical Engineering
 Bsc Mechanical Engineering - 3.72/4.00 with Honors
 
 ###Conference Presentations
-Jekel CF, Venter G, Venter MP. (2015). Obtaining Material Models for use in Finite Element Analyses of PVC-coated polyester via an Inverse Bubble Inflation Method [abstract]. CIMNE VII International Conference on Textile Composites and Inflatable Structures, Barcelona, Spain. 
+Jekel CF, Venter G, Venter MP (2015). Obtaining Material Models for use in Finite Element Analyses of PVC-coated polyester via an Inverse Bubble Inflation Method [abstract]. CIMNE VII International Conference on Textile Composites and Inflatable Structures, Barcelona, Spain. 
 
-Jekel CF, Venter G. (2014). An Inverse Method for Generating Polymer Properties for use in Finite Element Analyses via Bubble Inflation Testing [abstract]. SAImechE Mechanical, Manufacturing, and Materials Engineering Conference, Stellenbosch, South Africa.
+Jekel CF, Venter G (2014). An Inverse Method for Generating Polymer Properties for use in Finite Element Analyses via Bubble Inflation Testing [abstract]. SAImechE Mechanical, Manufacturing, and Materials Engineering Conference, Stellenbosch, South Africa.
 
 ###Professional Experience
 ##UTC Aerospace Systems
