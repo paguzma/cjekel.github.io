@@ -76,7 +76,7 @@ We can see the intensity values for each of the X and Y pixels are stored as 16 
 <div>
 {% highlight python %}
 >>> img8 = v_array.astype('uint8')
->>> plt.imshow(im8[0], cmap = cm.Greys_r)
+>>> plt.imshow(img8[0], cmap = cm.Greys_r)
 >>> plt.show()
 {% endhighlight %}
 </div>
