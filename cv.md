@@ -6,10 +6,10 @@ profile: true
 
 ###Education
 2016: Stellenbosch University  
-MEng Mechanical Engineering
+MEng Mechanical Engineering - cum laude
 
 2013: University of Colorado - Colorado Springs  
-Bsc Mechanical Engineering - 3.72/4.00 with Honors
+Bsc Mechanical Engineering - 3.72/4.00 with honor
 
 ###Conference Presentations
 Jekel CF, Venter G, Venter MP (2015). Obtaining Material Models for use in Finite Element Analyses of PVC-coated polyester via an Inverse Bubble Inflation Method [abstract]. CIMNE VII International Conference on Textile Composites and Inflatable Structures, Barcelona, Spain. 
