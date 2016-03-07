@@ -7,7 +7,7 @@ aboutPage: true
 cvPage: true
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 paginate: 20
 baseurl: /
