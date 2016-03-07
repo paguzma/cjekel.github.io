@@ -17,6 +17,7 @@ Jekel CF, Venter G, Venter MP (2015). Obtaining Material Models for use in Finit
 Jekel CF, Venter G (2014). An Inverse Method for Generating Polymer Properties for use in Finite Element Analyses via Bubble Inflation Testing [abstract]. SAImechE Mechanical, Manufacturing, and Materials Engineering Conference, Stellenbosch, South Africa.
 
 ### Professional Experience
+
 ## UTC Aerospace Systems
 2013 - 2014: Manufacturing Engineer  
 2012: Manufacturing Engineer Intern  
