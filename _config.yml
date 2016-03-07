@@ -6,7 +6,7 @@ email: cjekel /at\ gmail /dot\ com
 aboutPage: true
 cvPage: true
 
-markdown: redcarpet
+markdown: kramdown
 highlighter: pygments
 
 paginate: 20
