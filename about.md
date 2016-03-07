@@ -13,8 +13,7 @@ I'm a semi-pro traveler, burrito aficionado, Python scripter, and problem solver
 - material models 
 - inflatable structures
 
-
-
+<br />
 My technical skill set, determination, and easy going personality all combine to make me one exceptional team player. Send me an email at {{site.email}} and let's work together on some thought-provoking problems.
 
 # Site
