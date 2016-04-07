@@ -24,7 +24,7 @@ Below are the 20 most densely populated countries. It is important to mention Va
 |  3 | Singapore | 8141 |
 |  4 | Hong Kong | 6445 |
 |  5 | Gaza Strip | 5192 |
-|  6 | Gibraltar | 41780 |
+|  6 | Gibraltar | 4180 |
 |  7 | Bahrain | 1772 |
 |  8 | Maldives | 1320 |
 |  9 | Malta | 1310 |
@@ -73,7 +73,7 @@ I used the 1:50m scale data from Natural Earth Data. [Admin 0 – Countries](htt
 
 I created plots with a variety of different color maps that were available in Matplotlib. I created the images in png format, and also a vector pdf format. All the images can be found in [this](https://github.com/cjekel/countryPopulationDensity/tree/master/images) GitHub folder. If you haven't already, check out the full [imgur](http://imgur.com/a/Pb1i6) gallery! 
 
-I've include some of the better images bellow. 
+I've included some of the better images bellow. 
 
 ![Rainbow Population Density](https://github.com/cjekel/countryPopulationDensity/raw/master/images/worldPopulationDensity2015_rainbow.png)
 ![YlOrRd Population Density](https://github.com/cjekel/countryPopulationDensity/raw/master/images/worldPopulationDensity2015_YlOrRd.png)
@@ -87,9 +87,5 @@ I've include some of the better images bellow.
 ![plasma Population Density](https://github.com/cjekel/countryPopulationDensity/raw/master/images/worldPopulationDensity2015_plasma.png)
 ![Greys Population Density](https://github.com/cjekel/countryPopulationDensity/raw/master/images/worldPopulationDensity2015_Greys.png)
 
-
-
-
-
-Please comment if you enjoyed this post, or if you see an area for improvment.
+Please comment if you enjoyed this post!
 
