@@ -5,7 +5,7 @@ description: Plots were created of the USA's GDP per capita and GNI per capita f
 keywords: [Python, GDP per capita, GDP per capita adjusted inflation, USA GDP adjusted for inflation, adjusted USA GNI per capita for inflation]
 ---
 
-Has the overall economic situation for people living in the United States of America improved since 1960? Or is the economic situation the same now as it was in 1960? You can't spend too much time thinking about these situations without considering the scary alternative. Are people living in the USA now worse off than they were in 1960s? 
+Has the overall economic situation for people living in the United States of America improved since 1960? Or is the economic situation the same now as it was in 1960? You can't spend too much time thinking about these situations without considering the scary alternative. Are people living in the USA now worse off than they were in the 1960s? 
 
 This is a very complicated topic to demonstrate effectively. One could look at employment rates, literacy rate, life expectancy; it'll just get out of hand. I want to know what the overall economic trend is for those living in the USA. Specifically I want to know if the value of someone participating in the USA economy is higher now than 50 years ago. I believe that looking at this trend may be useful in understanding how the current economic situation relates to the past. Overall it is desirable that the value per person in a country increases over time, as this could lead to improved economic quality of life.
 
@@ -35,7 +35,7 @@ I adjusted the GDP per capita and GNI per capita plot for inflation with the CPI
 
 ![GDP per capita and GNI per cpaita adjusted for inflation to 2014 US dollars](https://raw.githubusercontent.com/cjekel/USA_GDP_per_capita_inflation_adjust/master/images/usaGDPandGNI_perCapita_2014.png) 
 
-When we look at the GDP and GNI per capita values adjusted for inflation, we see that overall both GDP per capita and GNI per capita in the USA have been increasing steadily from 1960 through 2014. This is overall a good sign, and it doesn't appear that the values have hit either a plateau or peek yet.
+When we look at the GDP and GNI per capita values adjusted for inflation, we see that overall both GDP per capita and GNI per capita in the USA have been increasing steadily from 1960 through 2014. This is overall a good sign, and it doesn't appear that the values have hit either a plateau or peak yet.
 
 ### What happens if the CPI is wrong?  
 
