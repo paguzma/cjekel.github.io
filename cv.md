@@ -11,6 +11,9 @@ MEng Mechanical Engineering - cum laude
 2013: University of Colorado - Colorado Springs  
 Bsc Mechanical Engineering - 3.72/4.00 with honor
 
+### Publications
+Charles F. Jekel, Gerhard Venter, and Martin P. Venter. Obtaining a hyperelastic non-linear orthotropic material model via inverse bubble inflation analysis. Structural and Multidisciplinary Optimization, pages 1-9, 2016. ISSN 1615-1488. [doi:10.1007/s00158-016-1456-8](http:////dx.doi.org/10.1007/s00158-016-1456-8).
+
 ### Conference Presentations
 Jekel CF, Venter G, Venter MP (2015). Obtaining Material Models for use in Finite Element Analyses of PVC-coated polyester via an Inverse Bubble Inflation Method [abstract]. CIMNE VII International Conference on Textile Composites and Inflatable Structures, Barcelona, Spain. 
 
