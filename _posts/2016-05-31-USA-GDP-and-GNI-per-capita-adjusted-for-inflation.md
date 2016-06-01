@@ -71,4 +71,4 @@ All of the code I used to process the GDP and GNI data is available on [GitHub](
 
 tl;dr
 
-An accurate measure of inflation is important when comparing the GDP per capita and GNI per capita overtime. Slight errors in the CPI values overtime have a serious effect on the long-term gdp per capita and gni per capita values.
+An accurate measure of inflation is important when comparing the GDP per capita and GNI per capita overtime. Slight errors in the CPI values overtime have a serious effect on the long-term gdp per capita and gni per capita trends.
