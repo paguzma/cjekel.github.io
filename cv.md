@@ -6,10 +6,11 @@ profile: true
 
 ### Education
 2016: Stellenbosch University  
-MEng Mechanical Engineering - cum laude
+MEng Mechanical Engineering: cum laude
+Thesis: **Obtaining non-linear orthotropic material models for pvc-coated polyester via inverse bubble inflation.** [http://hdl.handle.net/10019.1/98627](http://hdl.handle.net/10019.1/98627)
 
 2013: University of Colorado - Colorado Springs  
-Bsc Mechanical Engineering - 3.72/4.00 with honor
+Bsc Mechanical Engineering: 3.72/4.00 with honor
 
 ### Publications
 Charles F. Jekel, Gerhard Venter, and Martin P. Venter. **Obtaining a hyperelastic non-linear orthotropic material model via inverse bubble inflation analysis.** *Structural and Multidisciplinary Optimization*, pages 1-9, 2016. ISSN 1615-1488. [doi:10.1007/s00158-016-1456-8](http:////dx.doi.org/10.1007/s00158-016-1456-8).
