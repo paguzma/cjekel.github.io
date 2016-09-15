@@ -9,6 +9,7 @@ cvPage: true
 markdown: kramdown
 highlighter: rouge
 
+gems: [jekyll-paginate]
 paginate: 20
 baseurl: /
 domain_name: 'http://jekel.me'

@@ -5,11 +5,15 @@ profile: true
 ---
 
 ### Education
-2016: Stellenbosch University  
+2016 - 2020: University of Florida and Stellenbosch University  
+PhD Mechanical Engineering: surrogate models and inverse analysis to characterize material parameters
+
+
+2014 - 2016: Stellenbosch University  
 MEng Mechanical Engineering: cum laude  
 Thesis: **Obtaining non-linear orthotropic material models for pvc-coated polyester via inverse bubble inflation.** [http://hdl.handle.net/10019.1/98627](http://hdl.handle.net/10019.1/98627)
 
-2013: University of Colorado - Colorado Springs  
+2009 - 2013: University of Colorado - Colorado Springs  
 Bsc Mechanical Engineering: 3.72/4.00 with honor
 
 ### Publications
