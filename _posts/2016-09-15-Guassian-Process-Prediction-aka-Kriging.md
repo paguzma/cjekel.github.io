@@ -72,7 +72,8 @@ Well this isn't a much better fit. It appears that the Absolute-exponential corr
 
 <div>
 {% highlight python %}
-gp = gaussian_process.GaussianProcess(corr='generalized_exponential')gp.fit(x,y)
+gp = gaussian_process.GaussianProcess(corr='generalized_exponential')
+gp.fit(x,y)
 yPred, predMSE = gp.predict(X, eval_MSE=True)
 {% endhighlight %}
 </div>
