@@ -35,7 +35,7 @@ $$
 \mathbf{Y} = \mathbf{X}\mathbf{\beta} + \mathbf{r}
 $$
 </div>
-for a true function <span>\\( \mathbf{Y} \\)</span>, the matrix of independent variables <span>\\( \mathbf{X} \\)</span>, the model coefficients <span>\\( \mathbf{\beta} \\)</span>, and some residual difference between the true data and the model <span>\\( \mathbf{r} \\)</span>. For a second order polynomial, <span>\\( \mathbf{X} \\)</span> is of the form <span>\\( \mathbf{X} = [\mathbf{1} \mathbf{x} \mathbf{x^2}]\\)</span>. We can rewrite the equation of linear regression as 
+for a true function <span>\\( \mathbf{Y} \\)</span>, the matrix of independent variables <span>\\( \mathbf{X} \\)</span>, the model coefficients <span>\\( \mathbf{\beta} \\)</span>, and some residual difference between the true data and the model <span>\\( \mathbf{r} \\)</span>. For a second order polynomial, <span>\\( \mathbf{X} \\)</span> is of the form <span>\\( \mathbf{X} = [\mathbf{1}, \mathbf{x}, \mathbf{x^2}]\\)</span>. We can rewrite the equation of linear regression as 
 <div>
 $$
 \mathbf{r} = \mathbf{Y} - \mathbf{X}\mathbf{\beta} 
@@ -47,7 +47,7 @@ $$
 f(x|\mu , \sigma^2) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(x-\mu)^2}{2\sigma^2})
 $$
 </div>
-The probability density function <span>\\( f(x|\mu , \sigma^2) \\)</span> is for a point <span>\\( x \\)</span>, with a mean <span>\\( \mu \\)</span>, and standard deviation <span>\\( \sigma \\)</span>. If we substitute the residual into the equation, and assume that the residual will have a mean of zero <span>\\( \mu = 0 \\)</span> we get
+The probability density function <span>\\( f(x|\mu , \sigma^2) \\)</span> is for a point <span>\\( x \\)</span>, with a mean <span>\\( \mu \\)</span>, and standard deviation <span>\\( \sigma \\)</span>. If we substitute the residual into the equation, and assume that the residual will have a mean of zero (<span>\\( \mu = 0 \\)</span>) we get
 <div>
 $$
 f(r|0 , \sigma^2) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(y - x\beta)^2}{2\sigma^2})
@@ -65,7 +65,7 @@ $$
 L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(\mathbf{Y} - \mathbf{X}\mathbf{\beta})^{\text{T}}(\mathbf{Y} - \mathbf{X}\mathbf{\beta} ) }{2\sigma^2})
 $$
 </div>
-It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation tends to be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' valyes (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
+It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation can be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' valyes (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
 <div>
 {% highlight python %}
 #   define a function to calculate the log likelihood
@@ -81,7 +81,7 @@ def calcLogLikelihood(guess, true, n):
 Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
-\{ \hat{\beta}_{\text{MLE} \} \subseteq \{ \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n) \} 
+ \hat{\beta}_{\text{MLE}  \subseteq \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n)  
 $$
 </div>
 So since our data originates from a second order polynomial, let's fit a second order polynomial to the data. First we'll have to define a function which will calculate the log likelihood value of the second order polynomial for three different coefficients ('var').
