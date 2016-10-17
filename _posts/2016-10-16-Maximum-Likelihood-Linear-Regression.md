@@ -4,11 +4,12 @@ date:   2016-10-15 17:20:00
 description: Using maximum likelihood to fit a polynomial to data as opposed to a least squares fit
 keywords: [maximum likelihood, maximum likelihood estimation, linear regression, least squares, Python, scikit-learn]
 ---
-I am going to use maximum likelihood estimation (MLE) to fit a linear (polynomial) model to some data points. A simple case is presented to create an understanding of how model parameters can be identified by maximizing the likelihood as opposed to minimizing the sum of the squares (least squares). The likelihood equation is derived for a simple case, and gradient optimization is used to determine the coefficients of a polynomial which fit the data points. The polynomial that results from maximizing the likelihood should be the same as a polynomial from a least squares fit, if we assume a normal (Gaussian) distribution and that the data is independent and identically distributed. Thus the maximum likelihood parameters will be compared to the least squares parameters. All of the Python code used in this comparison will be available [here](https://github.com/cjekel/cjekel.github.io/tree/master/assets/2016-10-16).
+I am going to use maximum likelihood estimation (MLE) to fit a linear (polynomial) model to some data points. A simple case is presented to create an understanding of how model parameters can be identified by maximizing the likelihood as opposed to minimizing the sum of the squares (least squares). The likelihood equation is derived for a simple case, and gradient optimization is used to determine the coefficients of a polynomial which maximize the likelihood with the sample. The polynomial that results from maximizing the likelihood should be the same as a polynomial from a least squares fit, if we assume a normal (Gaussian) distribution and that the data is independent and identically distributed. Thus the maximum likelihood parameters will be compared to the least squares parameters. All of the Python code used in this comparison will be available [here](https://github.com/cjekel/cjekel.github.io/tree/master/assets/2016-10-16).
 
 So let's generate the data points that we'll be fitting a polynomial to. I assumed the data is from some second order polynomial, of which I added some noise to make the linear regression a bit more interesting. 
 <div>
 {% highlight python %}
+import numpy as np
 x = np.linspace(0.0,10.0, num=100)
 a = 4.0
 b = -3.5
@@ -22,7 +23,7 @@ y = y+noise
 {% endhighlight %}
 </div>
 
-Gives us the folloiwng data points
+The Python code gives us the folloiwng data points.
 
 ![Image of the polynomial based data points with noise.]({{ site.baseurl }}assets/2016-10-16/myData.png)
 
@@ -31,7 +32,7 @@ Now onto the formulation of the likelihood equation that we'll use to determine 
 Linear regression is generally of some form 
 <div>
 $$
-\bm{Y} = \bm{X}\bm{\beta} + \bm{r}
+\boldsymbol{Y} = \bm{X}\bm{\beta} + \bm{r}
 $$
 </div>
 for a true function <span>\\( \bm{Y} \\)</span>, the matrix of independent variables <span>\\( \bm{X} \\)</span>, the model coefficients <span>\\( \bm{\beta} \\)</span>, and some residual difference between the true data and the model <span>\\( \bm{r} \\)</span>. For a second order polynomial, <span>\\( \bm{X} \\)</span> is of the form <span>\\( \bm{X} = [\bm{1} \bm{x} \bm{x^2}]\\)</span>. We can rewrite the equation of linear regression as 
