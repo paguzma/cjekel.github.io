@@ -81,7 +81,7 @@ def calcLogLikelihood(guess, true, n):
 Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
- \hat{\beta}_{\text{MLE}  \subseteq \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n)  
+ \hat{\beta} _{\text{MLE}  \subseteq \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n) 
 $$
 </div>
 So since our data originates from a second order polynomial, let's fit a second order polynomial to the data. First we'll have to define a function which will calculate the log likelihood value of the second order polynomial for three different coefficients ('var').
