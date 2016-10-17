@@ -23,7 +23,7 @@ def calcLogLikelihood(guess, true, n):
 #   define my function which will return the objective function to be minimized
 def myFunction(var):
     yGuess = (var[2]*(x**2)) + (var[1]*x) + var[0]
-    f = calcLogLikelihood(yGuess, y, 100)
+    f = calcLogLikelihood(yGuess, y, len(yGuess))
     return (-1*f)
     
 #    Let's pick some random starting points for the optimizaiton    
@@ -42,7 +42,8 @@ res = minimize(myFunction, var, method='BFGS',
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
-model = Pipeline([('poly', PolynomialFeatures(degree=2)),('linear', LinearRegression(fit_intercept=False))])
+model = Pipeline([('poly', PolynomialFeatures(degree=2)),
+    ('linear', LinearRegression(fit_intercept=False))])
 
 model = model.fit(x[:, np.newaxis], y)
 coefs = model.named_steps['linear'].coef_
