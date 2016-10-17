@@ -81,14 +81,10 @@ def calcLogLikelihood(guess, true, n):
 Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
-\{ \hat{\beta}_{\text{MLE}} \} \subseteq \{ \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n) \}
+\{ \hat{\beta}_{\text{MLE}} \} \subseteq \{ \text{arg max}  \ln \bigg ( L(\beta | x_1, x_2, \cdots, x_n) \bigg )\}
 $$
 </div>
-<div>
-$$
- \hat{\beta} _{\text{MLE}  \subseteq \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n) 
-$$
-</div>
+
 So since our data originates from a second order polynomial, let's fit a second order polynomial to the data. First we'll have to define a function which will calculate the log likelihood value of the second order polynomial for three different coefficients ('var').
 <div>
 {% highlight python %}
@@ -102,10 +98,10 @@ def myFunction(var):
 {% endhighlight %}
 </div>
 
-We can then use gradient-based optimization to find which polynomial coefficients maximize the log-likelihood. I used scipy and the BFGS algorithm, but other algorithms and optimization methods should work well for this simple problem. I picked some random variable values to start the optimization. The Python code for the optimization is presented in the following lines. Note that maximizing the likelihood is the same as minimizing minus 1 times the likelihood.
+We can then use gradient-based optimization to find which polynomial coefficients maximize the log-likelihood. I used scipy and the BFGS algorithm, but other algorithms and optimization methods should work well for this simple problem. I picked some random variable values to start the optimization. The Python code to run the scipy optimizer is presented in the following lines. Note that maximizing the likelihood is the same as minimizing minus 1 times the likelihood.
 <div>
 {% highlight python %}
-#    Let's pick some random starting points for the optimization    
+#  Let's pick some random starting points for the optimization    
 nvar = 3
 var = np.zeros(nvar)
 var[0] = -15.5
@@ -139,5 +135,7 @@ I've made a plot of the data points, the polynomial from maximizing the log-likl
 ![Image of the fitted polynomials and the data points.]({{ site.baseurl }}assets/2016-10-16/maxLikelihoodComp.png)
 
 A few notes from implementing this simple MLE:
-- It appears that the MLE performs poorly from bad starting points. I suspect that with a poor starting point it may be beneficial to first run a sum of squares optimization to obtain a starting point of which a MLE can be performed from.
-- I'm not sure about how do I select an appropriate probability density function. I'm not sure what the benefit of using MLE of least squares if I always assume Gaussian... I guess I'll always know the standard deviation and that the mean may not always be zero.
+
+- It appears that the MLE performs poorly from bad starting points. I suspect that with a poor starting point it may be beneficial to first run a sum of squares optimization to obtain a starting point of which a MLE can be performed from.  
+
+- I'm not sure about how to select an appropriate probability density function. I'm not sure what the benefit of using MLE over least squares if I always assume Gaussian... I guess I'll always know the standard deviation, and that the mean may not always be zero.
