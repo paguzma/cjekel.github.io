@@ -32,16 +32,16 @@ Now onto the formulation of the likelihood equation that we'll use to determine 
 Linear regression is generally of some form 
 <div>
 $$
-\boldsymbol{Y} = \bm{X}\bm{\beta} + \bm{r}
+\mathbf{Y} = \mathbf{X}\mathbf{\beta} + \mathbf{r}
 $$
 </div>
-for a true function <span>\\( \bm{Y} \\)</span>, the matrix of independent variables <span>\\( \bm{X} \\)</span>, the model coefficients <span>\\( \bm{\beta} \\)</span>, and some residual difference between the true data and the model <span>\\( \bm{r} \\)</span>. For a second order polynomial, <span>\\( \bm{X} \\)</span> is of the form <span>\\( \bm{X} = [\bm{1} \bm{x} \bm{x^2}]\\)</span>. We can rewrite the equation of linear regression as 
+for a true function <span>\\( \mathbf{Y} \\)</span>, the matrix of independent variables <span>\\( \mathbf{X} \\)</span>, the model coefficients <span>\\( \mathbf{\beta} \\)</span>, and some residual difference between the true data and the model <span>\\( \mathbf{r} \\)</span>. For a second order polynomial, <span>\\( \mathbf{X} \\)</span> is of the form <span>\\( \mathbf{X} = [\mathbf{1} \mathbf{x} \mathbf{x^2}]\\)</span>. We can rewrite the equation of linear regression as 
 <div>
 $$
-\bm{r} = \bm{Y} - \bm{X}\bm{\beta} 
+\mathbf{r} = \mathbf{Y} - \mathbf{X}\mathbf{\beta} 
 $$
 </div>
-where the residuals <span>\\( \bm{r} \\)</span> are expressed as the difference between the true model (<span>\\( \bm{Y} \\)</span>) and the linear model (<span>\\( \bm{X}\bm{\beta} \\)</span>). If we assume the data to be of an independent and identically distributed sample, and that the residual <span>\\( \bm{r} \\)</span> is from a normal (Gaussian) distribution, then we'll get the following probability density function <span>\\( f \\)</span>.
+where the residuals <span>\\( \mathbf{r} \\)</span> are expressed as the difference between the true model (<span>\\( \mathbf{Y} \\)</span>) and the linear model (<span>\\( \mathbf{X}\mathbf{\beta} \\)</span>). If we assume the data to be of an independent and identically distributed sample, and that the residual <span>\\( \mathbf{r} \\)</span> is from a normal (Gaussian) distribution, then we'll get the following probability density function <span>\\( f \\)</span>.
 <div>
 $$
 f(x|\mu , \sigma^2) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(x-\mu)^2}{2\sigma^2})
@@ -62,10 +62,10 @@ $$
  the multiplication of all probability densities at each <span>\\( x_i \\)</span>  point. When we substitute the probability density function into the definition of the maximum likelihood function, we have the following.
 <div>
 $$
-L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(\bm{Y} - \bm{X}\bm{\beta})^{\text{T}}(\bm{Y} - \bm{X}\bm{\beta} ) }{2\sigma^2})
+L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(\mathbf{Y} - \mathbf{X}\mathbf{\beta})^{\text{T}}(\mathbf{Y} - \mathbf{X}\mathbf{\beta} ) }{2\sigma^2})
 $$
 </div>
-It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation tends to be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' valyes (<span>\\( \bm{Y} \\)</span>) and a set of 'guess' values <span>\\( \bm{X}\bm{\beta} \\)</span>.
+It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation tends to be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' valyes (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
 <div>
 {% highlight python %}
 #   define a function to calculate the log likelihood
@@ -78,7 +78,7 @@ def calcLogLikelihood(guess, true, n):
 {% endhighlight %}
 </div>
 
-Optimization is used to determine which paramters <span>\\( \bm{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
+Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
 \{ \hat{\beta}_{\text{MLE} \} \subseteq \{ \text{arg max}  \ln L(\beta | x_1, x_2, \cdots, x_n) \} 
