@@ -81,7 +81,7 @@ def calcLogLikelihood(guess, true, n):
 Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
- \hat{\beta}
+ \hat{\beta}_{\text{MLE}} 
 $$
 </div>
 <div>
