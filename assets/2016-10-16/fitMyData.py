@@ -14,8 +14,8 @@ plt.savefig('myData.png', dpi=300, type='png')
 
 #   define a function to calculate the log likiehood
 def calcLogLikelihood(guess, true, n):
-    sigma = np.std(true)
     error = true-guess
+    sigma = np.std(error)
     f = ((1.0/(2.0*math.pi*sigma*sigma))**(n/2))* \
         np.exp(-1*((np.dot(error.T,error))/(2*sigma*sigma)))
     return np.log(f)

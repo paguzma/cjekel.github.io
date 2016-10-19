@@ -4,6 +4,8 @@ date:   2016-10-15 17:20:00
 description: Using maximum likelihood to fit a polynomial to data as opposed to a least squares fit
 keywords: [maximum likelihood, maximum likelihood estimation, linear regression, least squares, Python, scikit-learn]
 ---
+*Edit October 19, 2016. There was an error in my code, where I took the standard devation of the true values, when I should have actually been taking the standard deviation of the residual values.*
+
 I am going to use maximum likelihood estimation (MLE) to fit a linear (polynomial) model to some data points. A simple case is presented to create an understanding of how model parameters can be identified by maximizing the likelihood as opposed to minimizing the sum of the squares (least squares). The likelihood equation is derived for a simple case, and gradient optimization is used to determine the coefficients of a polynomial which maximize the likelihood with the sample. The polynomial that results from maximizing the likelihood should be the same as a polynomial from a least squares fit, if we assume a normal (Gaussian) distribution and that the data is independent and identically distributed. Thus the maximum likelihood parameters will be compared to the least squares parameters. All of the Python code used in this comparison will be available [here](https://github.com/cjekel/cjekel.github.io/tree/master/assets/2016-10-16).
 
 So let's generate the data points that we'll be fitting a polynomial to. I assumed the data is from some second order polynomial, of which I added some noise to make the linear regression a bit more interesting. 
@@ -70,8 +72,8 @@ It is practical to work with the log-likelihood as opposed to the likelihood equ
 {% highlight python %}
 #   define a function to calculate the log likelihood
 def calcLogLikelihood(guess, true, n):
-    sigma = np.std(true)
     error = true-guess
+    sigma = np.std(error)
     f = ((1.0/(2.0*math.pi*sigma*sigma))**(n/2))* \
         np.exp(-1*((np.dot(error.T,error))/(2*sigma*sigma)))
     return np.log(f)
