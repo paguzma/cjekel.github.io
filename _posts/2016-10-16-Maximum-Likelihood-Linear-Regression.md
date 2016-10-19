@@ -138,6 +138,6 @@ I've made a plot of the data points, the polynomial from maximizing the log-likl
 
 A few notes from implementing this simple MLE:
 
-- It appears that the MLE performs poorly from bad starting points. I suspect that with a poor starting point it may be beneficial to first run a sum of squares optimization to obtain a starting point of which a MLE can be performed from.  
+- It appears that the MLE performs poorly from bad starting points. I suspect that with a poor starting point it may be beneficial to first run a sum of squares optimization to obtain a starting point of which a MLE can be performed from.  *Edit October 19, 2016. I re ran optimizations from random starting points by minimizing the root mean square error, and it actually appears that the MLE is a better optimization problem than the RMS error.*
 
 - I'm not sure about how to select an appropriate probability density function. I'm not sure what the benefit of using MLE over least squares if I always assume Gaussian... I guess I'll always know the standard deviation, and that the mean may not always be zero.
