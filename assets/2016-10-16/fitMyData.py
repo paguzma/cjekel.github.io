@@ -23,7 +23,7 @@ def calcLogLikelihood(guess, true, n):
 #   define my function which will return the objective function to be minimized
 def myFunction(var):
     yGuess = (var[2]*(x**2)) + (var[1]*x) + var[0]
-    f = calcLogLikelihood(yGuess, y, len(yGuess))
+    f = calcLogLikelihood(yGuess, y, float(len(yGuess)))
     return (-1*f)
     
 #    Let's pick some random starting points for the optimizaiton    
