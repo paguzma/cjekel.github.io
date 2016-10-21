@@ -1,7 +1,7 @@
 ---
 title:  "Maximum Likelihood Estimation is Sensitive to Starting Points"
-date:   2016-10-15 17:20:00
-description: Quick comparison of maximum liklihood esitimation vs root mean square error for linear regression from randoms tarting points
+date:   2016-10-21 15:20:00
+description: Quick comparison of maximum liklihood esitimation vs root mean square error for linear regression from random tarting points
 keywords: [maximum likelihood, maximum likelihood estimation, linear regression, root mean square error, Python]
 ---
 In my [previous post]({{ site.baseurl }}2016/Maximum-Likelihood-Linear-Regression), I derive a formulation to use maximum likelihood estimation (MLE) in a simple linear regression case. Looking at the formulation for MLE, I had the susspesion that the MLE will be much more sensitive to the starting points of a gradient optimization than other linear regression methods. To demonstarate the sensitivity to the starting points, I ran 10,000 linear regressions. For each starting point I ran a MLE and a root mean square minimization to determine the optimumum quadratic parameters to fit a polynomial to the data. As it turns out, the root mean square optimizations were just as good, or better than the MLE for every case. All of the code for this comparison is available [here](https://github.com/cjekel/cjekel.github.io/tree/master/assets/2016-10-21).
