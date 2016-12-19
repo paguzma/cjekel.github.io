@@ -81,7 +81,7 @@ Table 1. Average 10-fold cross validation prediction accuracy in percent.
 |Linear   	|71.05   	|71.05   	|
 |Polynomial   	|71.05   	|71.05   	|
 |Radial Basis   	|71.05   	|71.05  	|
-|Sigmoid   	|N/A   	|71.05   	|
+|Sigmoid   	|71.05   	|71.05   	|
 
 Table 2. Optimal determined C penalty parameter.
 
@@ -89,7 +89,7 @@ Table 2. Optimal determined C penalty parameter.
 |Linear   	|633   	|228   	|
 |Polynomial   	|825   	|338   	|
 |Radial Basis   	|448   	|225  	|
-|Sigmoid   	|N/A   	|836   	|
+|Sigmoid   	|1619   	|836   	|
 
 It is not recommended to use differential evolution to determine the optimal C penalty parameter. In my experience the exact value of C did not greatly affect the results of the support vector classification model. Rather focus on finding what order of magnitude works as a stable C value. If finding an optimal C value is very important to you, I recommend using a gradient optimization method (BFGS). It is suspected that much fewer function evaluations would have been performed had I used BFGS instead of differential evolution. This is because gradient optimization can find a suitable search direction for a one variable problem with only two function evaluations.
 
