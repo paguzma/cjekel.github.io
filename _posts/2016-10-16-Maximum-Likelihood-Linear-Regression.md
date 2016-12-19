@@ -4,9 +4,9 @@ date:   2016-10-15 17:20:00
 description: Using maximum likelihood to fit a polynomial to data as opposed to a least squares fit
 keywords: [maximum likelihood, maximum likelihood estimation, linear regression, least squares, Python, scikit-learn]
 ---
-*Edit October 19, 2016. There was an error in my code, where I took the standard devation of the true values, when I should have actually been taking the standard deviation of the residual values. I have corrected the post and the files.*
+*Edit October 19, 2016. There was an error in my code, where I took the standard deviation of the true values, when I should have actually been taking the standard deviation of the residual values. I have corrected the post and the files.*
 
-*Edit2 October 20, 2016. I was passing the interger length of the data set, instead of the floating point length, which messed up the math. I've corrected this and updated the code.*
+*Edit2 October 20, 2016. I was passing the integer length of the data set, instead of the floating point length, which messed up the math. I've corrected this and updated the code.*
 
 I am going to use maximum likelihood estimation (MLE) to fit a linear (polynomial) model to some data points. A simple case is presented to create an understanding of how model parameters can be identified by maximizing the likelihood as opposed to minimizing the sum of the squares (least squares). The likelihood equation is derived for a simple case, and gradient optimization is used to determine the coefficients of a polynomial which maximize the likelihood with the sample. The polynomial that results from maximizing the likelihood should be the same as a polynomial from a least squares fit, if we assume a normal (Gaussian) distribution and that the data is independent and identically distributed. Thus the maximum likelihood parameters will be compared to the least squares parameters. All of the Python code used in this comparison will be available [here](https://github.com/cjekel/cjekel.github.io/tree/master/assets/2016-10-16).
 
@@ -27,7 +27,7 @@ y = y+noise
 {% endhighlight %}
 </div>
 
-The Python code gives us the folloiwng data points.
+The Python code gives us the following data points.
 
 ![Image of the polynomial based data points with noise.]({{ site.baseurl }}assets/2016-10-16/myData.png)
 
@@ -69,7 +69,7 @@ $$
 L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(\mathbf{Y} - \mathbf{X}\mathbf{\beta})^{\text{T}}(\mathbf{Y} - \mathbf{X}\mathbf{\beta} ) }{2\sigma^2})
 $$
 </div>
-It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation can be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' valyes (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
+It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation can be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' values (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
 <div>
 {% highlight python %}
 #   define a function to calculate the log likelihood
@@ -82,7 +82,7 @@ def calcLogLikelihood(guess, true, n):
 {% endhighlight %}
 </div>
 
-Optimization is used to determine which paramters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
+Optimization is used to determine which parameters <span>\\( \mathbf{\beta} \\)</span> maximize the log-likelihood function. The optimization problem is expressed below.
 <div>
 $$
 \{ \hat{\beta}_{\text{MLE}} \} \subseteq \{ \text{arg max}  \ln \bigg ( L(\beta | x_1, x_2, \cdots, x_n) \bigg )\}
@@ -112,7 +112,7 @@ var[0] = -15.5
 var[1] = 19.5
 var[2] = -1.0
 
-#   let's maximize the liklihood (minimize -1*max(likelihood)
+#   let's maximize the likelihood (minimize -1*max(likelihood)
 from scipy.optimize import minimize
 res = minimize(myFunction, var, method='BFGS',
                 options={'disp': True})
@@ -122,7 +122,7 @@ res = minimize(myFunction, var, method='BFGS',
 As it turns out, with the assumptions we have made (Gaussian distribution, independent and identically distributed, <span>\\( \mu = 0 \\)</span>) the result of maximizing the likelihood should be the same as performing a least squares fit. So let's go ahead and perform a least squares fit to determine the coefficients of a second order polynomial from the data points. This can be done with scikit-learn easily with the following lines of Python code. 
 <div>
 {% highlight python %}
-#   pefrom least squres fit using scikitlearn
+#   perform least squares fit using scikitlearn
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
@@ -134,7 +134,7 @@ coefs = model.named_steps['linear'].coef_
 {% endhighlight %}
 </div>
 
-I've made a plot of the data points, the polynomial from maximizing the log-liklihood, and the least squares fit all on the same graph. We can clearly see that maximizing the likelihood was equivalent to performing a least squares fit for this data set. This was intended to be a simple example, as I hope to transition a maximum likelihood estimation to non-linear regression in the future. Obviously this example doesn't highlight or explain why someone would prefer to use a maximum likelihood estimation, but hopefully in the future I can explain the difference on a sample where the MLE gives a different result than the least squares optimization. 
+I've made a plot of the data points, the polynomial from maximizing the log-likelihood, and the least squares fit all on the same graph. We can clearly see that maximizing the likelihood was equivalent to performing a least squares fit for this data set. This was intended to be a simple example, as I hope to transition a maximum likelihood estimation to non-linear regression in the future. Obviously this example doesn't highlight or explain why someone would prefer to use a maximum likelihood estimation, but hopefully in the future I can explain the difference on a sample where the MLE gives a different result than the least squares optimization. 
 
 ![Image of the fitted polynomials and the data points.]({{ site.baseurl }}assets/2016-10-16/maxLikelihoodComp.png)
 

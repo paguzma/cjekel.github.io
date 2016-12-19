@@ -38,7 +38,7 @@ y = y.reshape(-1,1)
 
 #   initiate the Gaussian process
 gp = gaussian_process.GaussianProcess()
-#   fit to our traing poitns
+#   fit to our training points
 gp.fit(x,y)
 yPred, predMSE = gp.predict(X, eval_MSE=True)
 
@@ -98,7 +98,7 @@ yPred, predMSE = gp.predict(X, eval_MSE=True)
 {% endhighlight %}
 </div>
 
-![The generalized-exponential correlation function pulls datapoints pulls a trend down to each individual data point.]({{ site.baseurl }}assets/2016-09-15/figure3.png)
+![The generalized-exponential correlation function pulls data points pulls a trend down to each individual data point.]({{ site.baseurl }}assets/2016-09-15/figure3.png)
 
 This didn't create a great fit either. It appears that with the generalized-exponential correlation function pulled the trend down to each individual training point. Let's now try the cubic correlation function to see what happens.
 

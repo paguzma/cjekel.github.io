@@ -32,7 +32,7 @@ The [Bureau of Labor Statistics](http://www.bls.gov) has been monitoring the eff
 
 I adjusted the GDP per capita and GNI per capita plot for inflation with the CPI values, such that all prices are in 2014 US dollars. The plot can be seen below. 
 
-![GDP per capita and GNI per cpaita adjusted for inflation to 2014 US dollars](https://raw.githubusercontent.com/cjekel/USA_GDP_per_capita_inflation_adjust/master/images/usaGDPandGNI_perCapita_2014.png) 
+![GDP per capita and GNI per capita adjusted for inflation to 2014 US dollars](https://raw.githubusercontent.com/cjekel/USA_GDP_per_capita_inflation_adjust/master/images/usaGDPandGNI_perCapita_2014.png) 
 
 When we look at the GDP and GNI per capita values adjusted for inflation, we see that overall both GDP per capita and GNI per capita in the USA have been increasing steadily from 1960 through 2014. This is overall a good sign, and it doesn't appear that the values have hit either a plateau or peak yet.
 

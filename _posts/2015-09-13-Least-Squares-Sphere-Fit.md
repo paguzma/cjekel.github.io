@@ -2,13 +2,13 @@
 title:  "Least Squares Sphere Fit"
 date:   2015-09-13 22:00:00
 description: Fitting a sphere to data points using the least squares method
-keywords: [Python, least squares fit, sphere fit, Python spere fit]
+keywords: [Python, least squares fit, sphere fit, Python sphere fit]
 ---
-It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A Python function, which determines the sphere of best fit, is then presneted.
+It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A Python function, which determines the sphere of best fit, is then presented.
 
 So let's say you have a three dimensional data set. The data points plotted in three dimensional space resemble a sphere, so you'd like to know the sphere that would fit your data set the best. Well I have a sample data set that is well suited for a spherical fit using the least squares method. A plot of data points in three dimensional space can be seen in the following image. Now let's go through the process fitting a sphere to this data set.
 
-![Data points in three dimmensions]({{ site.baseurl }}assets/2015-09-13/pointsIn3DSpace.png)
+![Data points in three dimensions]({{ site.baseurl }}assets/2015-09-13/pointsIn3DSpace.png)
 
 
 The general equation of a sphere  in <span>\\( x \\)</span>, <span>\\( y \\)</span>, and <span>\\( z \\)</span> coordinates can be seen below. The center point of the sphere with radius <span>\\( r \\)</span> is found at the point ( <span>\\( x\_{0} \\)</span>, <span>\\( y\_0 \\)</span>, <span>\\( z\_0 \\)</span> ). We must rearrange the terms of the equation in order to use the least squares method.
@@ -103,6 +103,6 @@ def sphereFit(spX,spY,spZ):
 
 We can easily fit a sphere to our original data set using this function. The resulting sphere of best fit plotted with the original data points can be seen in the following image.
 
-![fitted data points in three dimmensions]({{ site.baseurl }}assets/2015-09-13/fittedPointsIn3DSpace.png)
+![fitted data points in three dimensions]({{ site.baseurl }}assets/2015-09-13/fittedPointsIn3DSpace.png)
 
 Please let me know if you found this post useful!  
