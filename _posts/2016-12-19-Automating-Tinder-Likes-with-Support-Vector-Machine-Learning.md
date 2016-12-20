@@ -4,6 +4,9 @@ date:   2016-12-19 17:00:00
 description: I recorded over 8,000 Tinder likes/dislikes so that I could use machine learning to predict whether I would like or dislike a new Tinder profile
 keywords: [Automating Tinder, support vector machines, SVM Tinder, histogram SVM, image classification, Tinder machine learning, machine learning, scikit-learn, Python]
 ---
+###	Update
+After some careful consideration, the method described here doesn't work. Instead of focusing on the prediction accuracy for the entire sample, I should actually focus on the Like accruacy for model selection. The reason is that if the number of *Dislikes* are much greater than the number of *Likes* then the modeling process will have bias towards *Dislikes* and be more likely to get would be *Likes* incorrect. I'll work more on this and post an update when ready.
+
 ### Abstract
 A support vector machine was used to perform image classification on 8,500 Tinder profiles. Entire profiles were recorded using a custom-built application that used the [pynder](https://github.com/charliewolf/pynder) Python library. Each profile considered has a binary choice, either a *Like* or a *Dislike*. The recorded profiles were  manually liked or disliked based on the users's preference. Images were processed into 32 bin histograms, and the bin intensities were used as the variables for the classification problem. Using 10-fold cross validation a support vector machine was selected with an estimated prediction accuracy of 71%. The support vector machine was then introduced to the custom application such that Tinder likes and dislikes can be administered according to the user's historical preference. The result is a bot capable of automatically liking Tinder profiles, without any user intervention, with an estimated 71% accuracy. 
 
