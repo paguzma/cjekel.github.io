@@ -4,6 +4,8 @@ date:   2015-09-13 22:00:00
 description: Fitting a sphere to data points using the least squares method
 keywords: [Python, least squares fit, sphere fit, Python sphere fit]
 ---
+*Update: 2016-01-22 I have added the code I used to make the plot of the 3D data an sphere!*
+
 It may not be intuitive to fit a sphere to three dimensional data points using the least squares method. This post demonstrates how the equation of a sphere can be rearranged to formulate the least squares problem. A Python function, which determines the sphere of best fit, is then presented.
 
 So let's say you have a three dimensional data set. The data points plotted in three dimensional space resemble a sphere, so you'd like to know the sphere that would fit your data set the best. Well I have a sample data set that is well suited for a spherical fit using the least squares method. A plot of data points in three dimensional space can be seen in the following image. Now let's go through the process fitting a sphere to this data set.
@@ -104,5 +106,37 @@ def sphereFit(spX,spY,spZ):
 We can easily fit a sphere to our original data set using this function. The resulting sphere of best fit plotted with the original data points can be seen in the following image.
 
 ![fitted data points in three dimensions]({{ site.baseurl }}assets/2015-09-13/fittedPointsIn3DSpace.png)
+
+The above 3D plot of the fitted sphere and data was created using the following code.
+{% highlight python %}
+from matplotlib import rcParams
+rcParams['font.family'] = 'serif'
+#   3D plot of the 
+import matplotlib.pyplot as plt
+
+r, x0, y0, z0 = sphereFit(correctX,correctY,correctZ)
+u, v = np.mgrid[0:2*np.pi:20j, 0:np.pi:10j]
+x=np.cos(u)*np.sin(v)*r
+y=np.sin(u)*np.sin(v)*r
+z=np.cos(v)*r
+x = x + x0
+y = y + y0
+z = z + z0
+
+#   3D plot of Sphere
+fig = plt.figure()
+ax = fig.add_subplot(111, projection='3d')
+ax.scatter(correctX, correctY, correctZ, zdir='z', s=20, c='b',rasterized=True)
+ax.plot_wireframe(x, y, z, color="r")
+ax.set_aspect('equal')
+ax.set_xlim3d(-35, 35)
+ax.set_ylim3d(-35,35)
+ax.set_zlim3d(-70,0)
+ax.set_xlabel('$x$ (mm)',fontsize=16)
+ax.set_ylabel('\n$y$ (mm)',fontsize=16)
+zlabel = ax.set_zlabel('\n$z$ (mm)',fontsize=16)
+plt.show()
+plt.savefig('steelBallFitted.pdf', format='pdf', dpi=300, bbox_extra_artists=[zlabel], bbox_inches='tight')
+{% endhighlight %}
 
 Please let me know if you found this post useful!  
