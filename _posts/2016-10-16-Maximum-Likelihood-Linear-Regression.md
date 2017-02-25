@@ -66,7 +66,7 @@ $$
  the multiplication of all probability densities at each <span>\\( x_i \\)</span>  point. When we substitute the probability density function into the definition of the maximum likelihood function, we have the following.
 <div>
 $$
-L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{-\frac{n}{2}} \text{exp}(- \frac{(\mathbf{Y} - \mathbf{X}\mathbf{\beta})^{\text{T}}(\mathbf{Y} - \mathbf{X}\mathbf{\beta} ) }{2\sigma^2})
+L(\beta | x_1, x_2, \cdots, x_n) = (2 \pi \sigma^2)^{\frac{n}{2}} \text{exp}(- \frac{(\mathbf{Y} - \mathbf{X}\mathbf{\beta})^{\text{T}}(\mathbf{Y} - \mathbf{X}\mathbf{\beta} ) }{2\sigma^2})
 $$
 </div>
 It is practical to work with the log-likelihood as opposed to the likelihood equation as the likelihood equation can be nearly zero. In Python we have created a function which returns the log-likelihood value given a set of 'true' values (<span>\\( \mathbf{Y} \\)</span>) and a set of 'guess' values <span>\\( \mathbf{X}\mathbf{\beta} \\)</span>.
