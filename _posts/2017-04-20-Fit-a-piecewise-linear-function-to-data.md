@@ -1,9 +1,13 @@
 ---
 title:  "Fitting a piecewise linear function to data"
-date:   2017-03-31 23:53:00
+date:   2017-04-20 23:53:00
 description: A Python library to fit continuous piecewise linear functions to data was created. This library allows for the user to specify the desired number of line segments when fitting piecewise linear functions.
-keywords: [lack of fit test, lack of fit, linear regression, Python]
+keywords: [piecewise linear fit, continuous piecewise fit, piece-wise linear fit, Python piecwise linear fit]
 ---
+
+I created a Python library, called [pwlf](https://github.com/cjekel/piecewiseLinearFitPython), for fitting a continuous piecewise linear function to data. What makes this library unique is that it allows the user to specify the desired number of line segments when performing piecewise linear fits. A global (heuristic) optimization algorithm is then used to find the best piecewise linear fit that uses the user-specified number of line segments.
+
+ So let's say we have some data that exists in two dimensional space. Ideally the data can be represented well as a continuous piecewise linear function <span>\\( f(x) \\)</span>. You can find a piecewise linear least squares fit that minimizes the sum of the square of residuals, if you specify the end points of the line segments. What you end up solving is a square matrix
 
 A global optimization algorithm was coupled to a 'traditional' least squares fit to find the best piecewise continuous function.
 
