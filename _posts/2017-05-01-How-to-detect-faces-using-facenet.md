@@ -102,7 +102,7 @@ $ python faceDetect.py
 
 The code should create the following images.
 
-![Obama boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/blob/master/assets/2017-05-01/faceBoxed357px-Obama_portrait_crop.jpg)
-![Trump boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/blob/master/assets/2017-05-01/faceBoxed360px-Donald_Trump_official_portrait.jpg)
-![Bush boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/blob/master/assets/2017-05-01/faceBoxed363px-George-W-Bush.jpeg)
-![Clinton boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/blob/master/assets/2017-05-01/faceBoxed368px-Bill_Clinton.jpg)
+![Obama boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/master/assets/2017-05-01/faceBoxed357px-Obama_portrait_crop.jpg)
+![Trump boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/master/assets/2017-05-01/faceBoxed360px-Donald_Trump_official_portrait.jpg)
+![Bush boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/master/assets/2017-05-01/faceBoxed363px-George-W-Bush.jpeg)
+![Clinton boxed face.](https://raw.githubusercontent.com/cjekel/cjekel.github.io/master/assets/2017-05-01/faceBoxed368px-Bill_Clinton.jpg)
