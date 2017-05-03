@@ -15,7 +15,7 @@ $ git clone https://github.com/davidsandberg/facenet.git
 {% endhighlight %}
 </div>
 
-And now install.
+And now install. *Edit: It appears that setup.py isn't configured properly. Rather add facenet/src to your PYTHONPATH.*
 <div>
 {% highlight bash %}
 $ cd facenet
